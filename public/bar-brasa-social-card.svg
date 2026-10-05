@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Bar Brasa — Catálogo</title>
+  <desc id="description">Cozinha artesanal, chope gelado e ambiente casual.</desc>
+  <rect width="1200" height="630" fill="#171311"/>
+  <circle cx="1000" cy="92" r="310" fill="#E34A32" opacity=".12"/>
+  <circle cx="118" cy="588" r="250" fill="#E34A32" opacity=".08"/>
+  <g transform="translate(185 168)">
+    <rect width="180" height="180" rx="43" fill="#E34A32"/>
+    <path fill="#171311" d="M99 27c5 27-10 37-23 49-11 11-20 23-20 40 0 24 15 41 36 41 25 0 46-18 46-46 0-21-12-41-31-60 2 20-5 31-16 41 2-24-4-45-21-60 2 20-5 33-16 46 7-5 15-9 22-13 15-8 25-19 23-38Z"/>
+  </g>
+  <text x="405" y="287" fill="#F3ECE5" font-family="Arial Black, Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-3">BAR</text>
+  <text x="588" y="287" fill="#E34A32" font-family="Arial Black, Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-3">BRASA</text>
+  <text x="409" y="337" fill="#C9BDB4" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">CATÁLOGO DIGITAL</text>
+  <line x1="185" y1="403" x2="1015" y2="403" stroke="#F3ECE5" opacity=".2"/>
+  <text x="600" y="465" fill="#F3ECE5" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" letter-spacing="2">COZINHA ARTESANAL  ·  CHOPE GELADO  ·  AMBIENTE CASUAL</text>
+</svg>

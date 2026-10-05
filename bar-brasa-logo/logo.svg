@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title">
+  <title id="title">Bar Brasa</title>
+  <g transform="translate(10 10)">
+    <rect width="160" height="160" rx="38" fill="#E34A32"/>
+    <path fill="#171311" d="M88 24c4 24-9 33-21 47-10 11-18 23-18 39 0 22 14 38 34 38 23 0 41-17 41-43 0-20-11-39-28-57 1 19-5 29-15 38 2-22-3-42-20-57 2 19-5 30-15 43 7-5 14-9 21-13 13-8 22-17 21-35Z"/>
+  </g>
+  <text x="205" y="118" fill="#171311" font-family="Arial Black, Arial, sans-serif" font-size="88" font-weight="900" letter-spacing="-3">BAR</text>
+  <text x="392" y="118" fill="#E34A32" font-family="Arial Black, Arial, sans-serif" font-size="88" font-weight="900" letter-spacing="-3">BRASA</text>
+</svg>

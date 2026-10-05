@@ -1,0 +1,17 @@
+{
+  "name": "Bar Brasa — Catálogo",
+  "short_name": "Bar Brasa",
+  "description": "Catálogo digital do Bar Brasa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#171311",
+  "theme_color": "#E34A32",
+  "icons": [
+    {
+      "src": "/bar-brasa-logo-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
