@@ -27,6 +27,9 @@
     box-shadow 0.2s;
 }
 .search-bar input:focus {
-  border-color: rgba(215, 58, 37, 0.55);
-  box-shadow: 0 0 0 3px rgba(215, 58, 37, 0.09);
+  border-color: rgba(227, 74, 50, 0.6);
+  box-shadow: 0 0 0 3px rgba(227, 74, 50, 0.12);
+}
+.search-bar input::placeholder {
+  color: #80746d;
 }

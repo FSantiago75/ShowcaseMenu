@@ -3,6 +3,7 @@ import { CircleCheck, CircleX, Hourglass, MapPin, Timer } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useBusinessStatus } from "../../hooks/useBusinessStatus";
 import type { BusinessStatusName } from "../../config/business-hours";
+import { HERO_VIDEO } from "../../config/hero-videos";
 import "@smastrom/react-rating/style.css";
 import "./CatalogHeader.css";
 
@@ -25,6 +26,15 @@ function CatalogHeader() {
 
   return (
     <header className="catalog-hero">
+      <video
+        aria-hidden="true"
+        autoPlay
+        className="catalog-hero-background"
+        loop
+        muted
+        playsInline
+        src={HERO_VIDEO.source}
+      />
       <div className="catalog-hero-content">
         <p className="catalog-hero-eyebrow">Bar & cozinha</p>
         <h1>

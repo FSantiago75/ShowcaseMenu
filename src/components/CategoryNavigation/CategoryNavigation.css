@@ -10,9 +10,9 @@
 .category-navigation button {
   flex: 0 0 auto;
   padding: 10px 14px;
-  color: #5e5651;
+  color: var(--muted);
   background: transparent;
-  border: 1px solid transparent;
+  border: 1px solid rgba(169, 158, 150, 0.22);
   border-radius: 8px;
   font-size: 12px;
   font-weight: 700;
@@ -21,11 +21,13 @@
 }
 .category-navigation button:hover {
   color: var(--ink);
-  background: #e9e2db;
+  background: var(--surface-raised);
+  border-color: rgba(234, 176, 93, 0.42);
 }
 .category-navigation button.is-active {
-  color: #fff;
-  background: var(--ink);
+  color: #17110e;
+  background: var(--amber);
+  border-color: var(--amber);
 }
 
 @media (max-width: 620px) {

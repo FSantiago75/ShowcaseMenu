@@ -36,9 +36,6 @@ function App() {
           <p>
             <strong>{filteredItems.length}</strong> de {catalog.produtos.length} produtos
           </p>
-          <p>
-            <strong>Disponibilidade atualizada</strong>
-          </p>
         </div>
 
         <div className="catalog-tools">

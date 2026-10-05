@@ -1,16 +1,17 @@
 :root {
   font-family: Inter, "Segoe UI", sans-serif;
-  color: #1b1715;
-  background: #f4f0ea;
+  color: #f3ece5;
+  background: #171311;
   font-synthesis: none;
-  --ink: #1b1715;
-  --muted: #746b66;
-  --paper: #f4f0ea;
-  --surface: #fffdf9;
-  --red: #d73a25;
-  --red-dark: #a82819;
-  --amber: #f0ad42;
-  --line: #dfd5cc;
+  --ink: #f3ece5;
+  --muted: #a99e96;
+  --paper: #171311;
+  --surface: #211b18;
+  --surface-raised: #29211d;
+  --red: #e34a32;
+  --red-dark: #b73524;
+  --amber: #eab05d;
+  --line: #3a302b;
 }
 
 * {
