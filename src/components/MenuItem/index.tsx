@@ -39,7 +39,8 @@ function MenuItem({ item, onSelect }: MenuItemProps) {
           <strong className="product-card-price">{formattedPrice}</strong>
           <span className={`product-card-status${isAvailable ? "" : " is-unavailable"}`}>
             <i aria-hidden="true" />
-            {isAvailable ? "Disponível hoje" : "Esgotado hoje"}
+            <span>{isAvailable ? "Disponível" : "Esgotado"}</span>
+            <span className="product-card-status-today"> hoje</span>
           </span>
         </div>
       </div>
