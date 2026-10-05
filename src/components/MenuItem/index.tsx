@@ -3,9 +3,10 @@ import "./MenuItem.css";
 
 interface MenuItemProps {
   item: Product;
+  onSelect: (item: Product) => void;
 }
 
-function MenuItem({ item }: MenuItemProps) {
+function MenuItem({ item, onSelect }: MenuItemProps) {
   const formattedPrice = item.preco.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL",
@@ -13,7 +14,20 @@ function MenuItem({ item }: MenuItemProps) {
   const isAvailable = item.disponivel !== false;
 
   return (
-    <article className={`product-card${isAvailable ? "" : " is-unavailable"}`} data-reveal>
+    <article
+      aria-label={`Ver detalhes de ${item.titulo}`}
+      className={`product-card${isAvailable ? "" : " is-unavailable"}`}
+      data-reveal
+      onClick={() => onSelect(item)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onSelect(item);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+    >
       <div className="product-card-image">
         <img alt={item.titulo} loading="lazy" src={item.imagem} />
       </div>

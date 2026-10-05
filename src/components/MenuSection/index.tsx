@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import MenuItem from "../MenuItem";
+import ProductModal from "../ProductModal";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import type { Product } from "../../types/catalog";
 import "./MenuSection.css";
@@ -10,6 +11,7 @@ interface MenuSectionProps {
 
 function MenuSection({ items }: MenuSectionProps) {
   const listRef = useRef<HTMLDivElement>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   useScrollReveal(listRef, items);
 
   if (!items.length) {
@@ -22,11 +24,20 @@ function MenuSection({ items }: MenuSectionProps) {
   }
 
   return (
-    <div className="menu-grid" aria-live="polite" ref={listRef}>
-      {items.map((item) => (
-        <MenuItem item={item} key={`${item.secao}-${item.titulo}`} />
-      ))}
-    </div>
+    <>
+      <div className="menu-grid" aria-live="polite" ref={listRef}>
+        {items.map((item) => (
+          <MenuItem
+            item={item}
+            key={`${item.secao}-${item.titulo}`}
+            onSelect={setSelectedProduct}
+          />
+        ))}
+      </div>
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      )}
+    </>
   );
 }
 

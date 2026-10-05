@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import BackToTop from "../BackToTop";
 import CatalogHeader from "../CatalogHeader";
 import CategoryNavigation from "../CategoryNavigation";
@@ -15,8 +15,6 @@ const categories = ["Todos", ...new Set(catalog.produtos.map((item) => item.seca
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-  const catalogResultsRef = useRef<HTMLDivElement>(null);
-  const isFirstCategoryRender = useRef(true);
   const { activeCategory, selectedCategory, isChangingCategory, changeCategory } =
     useAnimatedCategory("Todos");
 
@@ -29,15 +27,6 @@ function App() {
       return matchesCategory && searchableContent.includes(normalizedSearch);
     });
   }, [activeCategory, searchTerm]);
-
-  useEffect(() => {
-    if (isFirstCategoryRender.current) {
-      isFirstCategoryRender.current = false;
-      return;
-    }
-
-    catalogResultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [activeCategory]);
 
   return (
     <>
@@ -58,10 +47,7 @@ function App() {
           />
         </div>
 
-        <div
-          className={`catalog-results${isChangingCategory ? " is-changing" : ""}`}
-          ref={catalogResultsRef}
-        >
+        <div className={`catalog-results${isChangingCategory ? " is-changing" : ""}`}>
           <MenuSection items={filteredItems} />
         </div>
       </main>
