@@ -27,11 +27,7 @@ function MenuSection({ items }: MenuSectionProps) {
     <>
       <div className="menu-grid" aria-live="polite" ref={listRef}>
         {items.map((item) => (
-          <MenuItem
-            item={item}
-            key={`${item.secao}-${item.titulo}`}
-            onSelect={setSelectedProduct}
-          />
+          <MenuItem item={item} key={item.id} onSelect={setSelectedProduct} />
         ))}
       </div>
       {selectedProduct && (
