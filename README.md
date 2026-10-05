@@ -1,12 +1,14 @@
-# Ember & Oak
+# Showcase Menu
 
-A polished digital menu concept for a fictional seasonal restaurant. Built as a public portfolio piece with entirely fictional names, descriptions, pricing and brand information.
+A responsive digital catalog focused on fast product discovery, category filtering and a polished browsing experience.
 
 ## Stack
 
 - React
+- TypeScript
 - Vite
 - CSS with native custom properties and responsive layout
+- Prettier
 
 ## Run locally
 
@@ -21,6 +23,29 @@ npm run dev
 npm run build
 ```
 
-Each component lives in its own file. Menu content is isolated from presentation inside `src/data`, keeping the interface predictable and easy to extend.
+## Code quality
 
-Ember & Oak is a fictional brand created for demonstration purposes. All products, names, prices and images are illustrative.
+```bash
+npm run type-check
+npm run format-check
+```
+
+## Structure
+
+```text
+src/
+├── components/       # One folder per visual component
+│   └── Component/
+│       ├── index.tsx
+│       └── Component.css
+├── config/           # Declarative business rules and schedules
+├── data/             # Temporary catalog source
+├── hooks/            # Focused interaction and animation behavior
+├── styles/           # Global tokens and browser defaults only
+├── types/            # Shared domain contracts
+└── utils/            # Small reusable transformations
+```
+
+CSS classes use kebab-case. Component logic uses typed props, and business rules stay outside visual components.
+
+The current catalog data and images are temporary development references and must be replaced before public deployment.

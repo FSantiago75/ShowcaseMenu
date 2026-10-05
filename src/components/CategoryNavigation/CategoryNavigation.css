@@ -1,0 +1,36 @@
+.category-navigation {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.category-navigation::-webkit-scrollbar {
+  display: none;
+}
+.category-navigation button {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  color: #5e5651;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+.category-navigation button:hover {
+  color: var(--ink);
+  background: #e9e2db;
+}
+.category-navigation button.is-active {
+  color: #fff;
+  background: var(--ink);
+}
+
+@media (max-width: 620px) {
+  .category-navigation {
+    margin-inline: -14px;
+    padding-inline: 14px;
+  }
+}
